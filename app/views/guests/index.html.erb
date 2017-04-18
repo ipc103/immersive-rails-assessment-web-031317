@@ -1,5 +1,14 @@
 <h1>All The Guests</h1>
 
+<h2>Top Guests</h2>
+
+<ul>
+  <% @guests.top_guests.each do |guest| %>
+    <li><%= "#{guest.name} - #{guest.average_rating}"%>
+  <% end %>
+</ul>
+
+<h3>All Guests</h3>
 <ul>
   <% @guests.each do |guest| %>
     <li><%= link_to guest.name, guest_path(guest) %></li>
