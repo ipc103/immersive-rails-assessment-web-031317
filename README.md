@@ -24,8 +24,14 @@ Luckily, another developer has already started the job. We have a model for gues
 
 1. On the guests index page, clicking on a guest's name should take us to a detail view about each guest. This View should include the guests name and occupation.
 2. As a user, I should be able to create a new appearance for a guest. The Appearance should be associated with an episode and be associated with that guest. Remember that we can have the same guest on the show many times. The appearance should also have a rating on a 1-5 scale so we can keep track of what guests we'd like to have back on the show.
+  + Create a join table for guests and episodes
+  + Create a form to be able to create instances of that join table
+
+  + visiting '/appearances/new' should display a form to make a new appearance
+  + making a POST '/appearances' should create the new appearance 
+
 3. As a user, I should be able to view all of the guests for a particular episode. This means that we'll need an episodes show page that lists out all of the guests who were on that episode.
-4. As a user, I should be able to login. Build out Login Form so that our users can login. To be RESTful - the form should post to '/sessions' and go to our `SessionsController#create` action. 
+4. As a user, I should be able to login. Build out Login Form so that our users can login. To be RESTful - the form should post to '/sessions' and go to our `SessionsController#create` action.
 
 ### Hints / Tips
 
