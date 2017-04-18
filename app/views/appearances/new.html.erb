@@ -2,10 +2,10 @@
 
 <%= form_for @appearance do |f| %>
   <%= f.label :guest_id %>
-  <%= f.text_field :guest_id %>
+  <%= f.collection_select :guest_id, Guest.all, :id, :name %>
   <%= f.label :episode_id %>
-  <%= f.text_field :episode_id %>
+  <%= f.collection_select :episode_id, Episode.all, :id, :date %>
   <%= f.label :rating %>
-  <%= f.text_field :rating %>
+  <%= f.number_field :rating, in: (1..5) %>
   <%= f.submit %>
 <% end %>

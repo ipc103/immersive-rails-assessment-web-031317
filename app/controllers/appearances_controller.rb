@@ -7,7 +7,7 @@ class AppearancesController < ApplicationController
   def create
     appearance = Appearance.new(appearance_params)
     if appearance.save
-      redirect_to guest_path(appearance.guest)
+      redirect_to episode_path(appearance.episode)
     else
       render 'new'
     end
